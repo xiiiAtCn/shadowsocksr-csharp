@@ -67,6 +67,7 @@ namespace Shadowsocks.View
         private PortSettingsForm portMapForm;
         private SubscribeForm subScribeForm;
         private LogForm logForm;
+        private TestForm testForm;
         private string _urlToOpen;
         private System.Timers.Timer timerDelayCheckUpdate;
 
@@ -294,7 +295,8 @@ namespace Shadowsocks.View
                     CreateMenuItem("About...", new EventHandler(this.AboutItem_Click)),
                     CreateMenuItem("Donate...", new EventHandler(this.DonateItem_Click)),
                 }),
-                CreateMenuItem("Quit", new EventHandler(this.Quit_Click))
+                CreateMenuItem("Quit", new EventHandler(this.Quit_Click)),
+                CreateMenuItem("Test", new EventHandler(this.Test_Click))
             });
             this.UpdateItem.Visible = false;
         }
@@ -979,6 +981,12 @@ namespace Shadowsocks.View
             }
             _notifyIcon.Visible = false;
             Application.Exit();
+        }
+        
+        public void Test_Click(object sender, EventArgs e)
+        {
+            testForm = new TestForm();
+            testForm.Show();
         }
 
         private void OpenWiki_Click(object sender, EventArgs e)

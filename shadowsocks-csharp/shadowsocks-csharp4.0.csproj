@@ -248,6 +248,12 @@
     <Compile Include="View\SubscribeForm.designer.cs">
       <DependentUpon>SubscribeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\ConfigForm.resx">
       <DependentUpon>ConfigForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\SubscribeForm.resx">
       <DependentUpon>SubscribeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="app.manifest">
